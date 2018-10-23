@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+
+    <TextView
+        android:id="@id/flashcard_question"
+        android:layout_width="wrap_content"
+        android:layout_height="84dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:background="#FFFF33"
+        android:clickable="true"
+        android:text="Who is the 46th President of the United States?"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="24sp" />
+
+
+    <TextView
+        android:id="@+id/flashcard_answer"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/flashcard_question"
+        android:background="#5cd0e4"
+        android:text="Here I am Biraj!"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:visibility="invisible" />
+
+
+
+</RelativeLayout>
