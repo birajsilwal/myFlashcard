@@ -4,7 +4,7 @@
 This app features customization of views to be displayed on the scree. Here, onClickListener is used to change the display form questin to answer. 
 
 ### App Walk-though
-<img src="https://i.imgur.com/7Ls7t0x.gifv" width=200><br>
+<img src="https://i.imgur.com/7Ls7t0x.gif" width=200><br>
 
 ## Required
 - [x] Create New Project in Android Studio
