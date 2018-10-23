@@ -1,7 +1,7 @@
 ## myFlashcard
 
 ### App Description
-This app features customization of views to be displayed on the scree. Here, onClickListener is used to change the display form questin to answer. 
+This app features customization of views to be displayed on the screen. In this app, onClickListener is used to change the display form questin to answer. 
 
 ### App Walk-though
 <img src="https://github.com/birajsilwal/myFlashcard/blob/master/myFlashcard.gif" width=200><br>
