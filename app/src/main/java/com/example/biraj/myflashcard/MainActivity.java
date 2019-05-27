@@ -1,50 +1,70 @@
 package com.example.biraj.myflashcard;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener(){
+
+        findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 findViewById(R.id.flashcard_answer).setVisibility(View.VISIBLE);
                 findViewById(R.id.flashcard_question).setVisibility(View.INVISIBLE);
             }
-
         });
 
-        findViewById(R.id.add_card).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.flashcard_answer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent createCard = new Intent(MainActivity.this, AddCardActivity.class);
-                startActivityForResult(createCard,100);
-                //startActivity(createCard);
+                findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
+                findViewById(R.id.flashcard_question).setVisibility(View.VISIBLE);
             }
         });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            //Intent intent = getIntent();
-            String question = data.getStringExtra("question");
-            String answer = data.getStringExtra("answer");
 
 
-            TextView flashcard_question = (TextView) findViewById(R.id.flashcard_question);
-            TextView flashcard_answer = (TextView) findViewById(R.id.flashcard_answer);
+//        findViewById(R.id.incorrect_answer1).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                v.setBackground(getResources().getDrawable(R.drawable.choice_background_incorrect));
+//                findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.choice_background_correct));
+//                stopTimer();
+//            }
+//        });
 
-            flashcard_question.setText(question);
-            flashcard_answer.setText(answer);
+
+
+        findViewById(R.id.incorrect_answer2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.incorrect_answer2).setBackgroundColor(getResources().getColor(R.color.my_red_color, null));
+                findViewById(R.id.correct_answer).setBackgroundColor(getResources().getColor(R.color.my_green_color, null));
+            }
+        });
+
+        findViewById(R.id.correct_answer).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.correct_answer).setBackgroundColor(getResources().getColor(R.color.my_green_color, null));
+            }
+        });
+
+/*        findViewById(R.id.incorrect_answer1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.incorrect_answer1).setBackgroundColor(getResources().getColor(R.color.my_red_color, null));
+                findViewById(R.id.correct_answer).setBackgroundColor(getResources().getColor(R.color.my_green_color, null));
+            }
+        });*/
+
     }
 }
-
