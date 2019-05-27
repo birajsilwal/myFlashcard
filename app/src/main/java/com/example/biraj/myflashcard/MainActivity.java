@@ -31,40 +31,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//for options (correct and incorrect)
 
-//        findViewById(R.id.incorrect_answer1).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                v.setBackground(getResources().getDrawable(R.drawable.choice_background_incorrect));
-//                findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.choice_background_correct));
-//                stopTimer();
-//            }
-//        });
-
-
+        findViewById(R.id.incorrect_answer1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setBackground(getResources().getDrawable(R.drawable.incorrect_option_background));
+                findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.correct_option_background));
+            }
+        });
 
         findViewById(R.id.incorrect_answer2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findViewById(R.id.incorrect_answer2).setBackgroundColor(getResources().getColor(R.color.my_red_color, null));
-                findViewById(R.id.correct_answer).setBackgroundColor(getResources().getColor(R.color.my_green_color, null));
+                v.setBackground(getResources().getDrawable(R.drawable.incorrect_option_background));
+                findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.correct_option_background));
             }
         });
 
         findViewById(R.id.correct_answer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findViewById(R.id.correct_answer).setBackgroundColor(getResources().getColor(R.color.my_green_color, null));
+                findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.correct_option_background));
             }
         });
 
-/*        findViewById(R.id.incorrect_answer1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.main_view).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findViewById(R.id.incorrect_answer1).setBackgroundColor(getResources().getColor(R.color.my_red_color, null));
-                findViewById(R.id.correct_answer).setBackgroundColor(getResources().getColor(R.color.my_green_color, null));
+                findViewById(R.id.incorrect_answer1).setBackground(getResources().getDrawable(R.drawable.option_background));
+                findViewById(R.id.incorrect_answer2).setBackground(getResources().getDrawable(R.drawable.option_background));
+                findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.option_background));
             }
-        });*/
-
+        });
     }
 }
