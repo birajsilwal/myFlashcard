@@ -61,9 +61,9 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/cancel_icon.png" />
-                                      <entry key="foregroundLayerName" value="cancel_icon" />
-                                      <entry key="outputName" value="cancel" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/edit_icon.png" />
+                                      <entry key="foregroundLayerName" value="edit_icon" />
+                                      <entry key="outputName" value="edit" />
                                     </map>
                                   </option>
                                 </PersistentState>
