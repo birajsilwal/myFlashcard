@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -84,6 +87,13 @@ public class MainActivity extends AppCompatActivity {
             String correct_answer = data.getExtras().getString("correct_answer");
             String wrong_answer1 = data.getExtras().getString("wrong_answer1");
             String wrong_answer2 = data.getExtras().getString("wrong_answer2");
+
+            ((TextView) findViewById(R.id.flashcard_question)).setText(question);
+            ((TextView) findViewById(R.id.flashcard_answer)).setText(correct_answer);
+            ((TextView) findViewById(R.id.correct_answer)).setText(correct_answer);
+            ((TextView) findViewById(R.id.incorrect_answer1)).setText(wrong_answer1);
+            ((TextView) findViewById(R.id.incorrect_answer2)).setText(wrong_answer2);
+
         }
     }
 
