@@ -1,5 +1,6 @@
 package com.example.biraj.myflashcard;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -64,5 +65,27 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.option_background));
             }
         });
+
+
+        findViewById(R.id.add_card).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                MainActivity.this.startActivityForResult(intent, 100);
+            }
+        });
+
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 100) {
+            String question = data.getExtras().getString("question");
+            String correct_answer = data.getExtras().getString("correct_answer");
+            String wrong_answer1 = data.getExtras().getString("wrong_answer1");
+            String wrong_answer2 = data.getExtras().getString("wrong_answer2");
+        }
+    }
+
+
 }
