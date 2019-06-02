@@ -15,11 +15,8 @@
 - [x] User can also enter multiple choice answers when creating a card
 - [x] App is further styled and customized!
 
-<img src="https://i.imgur.com/ikHO0e2.gif" width="200" height="400" />  
-
-
-
-
+### App Walk-through
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo2.gif" width=200><br>
 
 ## Lab 1
 
