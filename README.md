@@ -1,6 +1,13 @@
 ## myFlashcard
 
 # Lab 2
+
+### App Description
+A simple user-friendly flashcard application that allows users to create custom flashcards and edit them. 
+
+### App Walk-through
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo2.gif" width=200><br>
+
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
 - [x] The 'Add Card Screen' has a cancel button to take the user back to the main screen
@@ -14,9 +21,6 @@
 - [x] A notification is shown if the card was created successfully
 - [x] User can also enter multiple choice answers when creating a card
 - [x] App is further styled and customized!
-
-### App Walk-through
-<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo2.gif" width=200><br>
 
 ## Lab 1
 
