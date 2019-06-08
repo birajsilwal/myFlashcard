@@ -28,7 +28,7 @@ A simple user-friendly flashcard application that allows users to create custom 
 A simple user-friendly flashcard application. 
 
 ### App Walk-though
-<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo1.gif" width=200><br>
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo1.gif" width=300><br>
 
 ## Required
 - [x] Create New Project in Android Studio
