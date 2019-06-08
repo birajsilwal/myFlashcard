@@ -61,9 +61,9 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/edit_icon.png" />
-                                      <entry key="foregroundLayerName" value="edit_icon" />
-                                      <entry key="outputName" value="edit" />
+                                      <entry key="foregroundImage" value="C:\Users\Venom\Downloads\trash_icon.png" />
+                                      <entry key="foregroundLayerName" value="trash_icon" />
+                                      <entry key="outputName" value="trash" />
                                     </map>
                                   </option>
                                 </PersistentState>

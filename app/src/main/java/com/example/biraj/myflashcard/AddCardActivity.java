@@ -21,8 +21,8 @@ public class AddCardActivity extends AppCompatActivity {
 
         ((EditText) findViewById(R.id.question)).setText(question);
         ((EditText) findViewById(R.id.correct_answer)).setText(correct_answer);
-        ((EditText) findViewById(R.id.wrong_answer1)).setText(wrong_answer1);
-        ((EditText) findViewById(R.id.wrong_answer2)).setText(wrong_answer2);
+        ((EditText) findViewById(R.id.wrong_answer_1)).setText(wrong_answer1);
+        ((EditText) findViewById(R.id.wrong_answer_2)).setText(wrong_answer2);
 
         findViewById(R.id.cancel_card).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,22 +37,24 @@ public class AddCardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String question = ((EditText) findViewById(R.id.question)).getText().toString();
                 String correct_answer = ((EditText) findViewById(R.id.correct_answer)).getText().toString();
-                String wrong_answer1 = ((EditText) findViewById(R.id.wrong_answer1)).getText().toString();
-                String wrong_answer2 = ((EditText) findViewById(R.id.wrong_answer2)).getText().toString();
+                String wrong_answer_1 = ((EditText) findViewById(R.id.wrong_answer_1)).getText().toString();
+                String wrong_answer_2 = ((EditText) findViewById(R.id.wrong_answer_2)).getText().toString();
 
-                if(question.length() == 0 || correct_answer.length() == 0 || wrong_answer1.length() == 0 || wrong_answer2.length() == 0){
+                if(question.length() == 0 || correct_answer.length() == 0 || wrong_answer_1.length() == 0 || wrong_answer_2.length() == 0){
                     Toast.makeText(getApplicationContext(), "Must enter all question and answer.", Toast.LENGTH_SHORT).show();
                 }else {
                     Intent data = new Intent();
                     data.putExtra("question", question);
                     data.putExtra("correct_answer", correct_answer);
-                    data.putExtra("wrong_answer1", wrong_answer1);
-                    data.putExtra("wrong_answer2", wrong_answer2);
+                    data.putExtra("wrong_answer_1", wrong_answer_1);
+                    data.putExtra("wrong_answer_2", wrong_answer_2);
                     setResult(RESULT_OK, data);
                     finish();
                 }
             }
         });
+
+
     }
 }
 

@@ -54,7 +54,7 @@
         android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/wrong_answer1"
+        android:id="@+id/wrong_answer_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -66,7 +66,7 @@
         android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/wrong_answer2"
+        android:id="@+id/wrong_answer_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
