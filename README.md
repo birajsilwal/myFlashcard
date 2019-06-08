@@ -6,7 +6,7 @@
 A simple user-friendly flashcard application that allows users to create custom flashcards and edit them. 
 
 ### App Walk-through
-<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo2.gif" width=200><br>
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo2.gif" width=300><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
