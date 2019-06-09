@@ -122,5 +122,22 @@
         android:layout_marginBottom="22dp"
         android:src="@mipmap/trash_icon" />
 
+    <TextView
+        android:id="@+id/emptystate"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="No flashcards yet"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:elevation="15dp"
+
+        />
+
 </RelativeLayout>
 
