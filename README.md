@@ -1,5 +1,25 @@
 ## myFlashcard
 
+## Lab 4
+
+### App Description
+A simple user-friendly flashcard application, with implementation of animations and stylying, that allows users to create custom flashcards with multiple options and edit them. Created flashcard are saved into the database, it can be retrived even after user closes the app of restart the device. 
+
+### App Walk-though
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo 4.gif" width=400><br>
+
+
+## Required
+- [x] User sees a transition animation when going from the main screen to the add card screen.
+- [x] User sees a reveal animation when the flashcard is tapped and the answer is shown
+- [ ] User sees flashcards animating in / out when the 'next' button is tapped
+
+## Optional
+- [x] Extra styling is added!
+- [x] User sees a countdown timer for each question
+- [x] User sees a 'card flip' animation when the card is tapped
+- [x] User sees a celebration animation with confetti when they answer a question correctly
+
 ## Lab 3
 
 ### App Description
