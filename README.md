@@ -6,7 +6,7 @@
 A simple user-friendly flashcard application, with implementation of animations and stylying, that allows users to create custom flashcards with multiple options and edit them. Created flashcard are saved into the database, it can be retrived even after user closes the app of restart the device. 
 
 ### App Walk-though
-<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo4.gif" width=400><br>
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo 4.gif" width=400><br>
 
 
 ## Required
