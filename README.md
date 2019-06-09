@@ -1,5 +1,24 @@
 ## myFlashcard
 
+## Lab 3
+
+### App Description
+A simple user-friendly flashcard application that allows users to create custom flashcards with multiple options and edit them. Created flashcard are saved into the database, it can be retrived even after user closes the app of restart the device. 
+
+### App Walk-though
+
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo3.gif" width=300><br>
+
+## Required
+- [x] User can create a card and still see their created card when the app is relaunched.
+- [x] User can create muliple cards and browse through all created cards
+
+## Optional
+- [x] User can delete a card and no longer see it in their deck anymore
+- [ ] Flashcards are shown in random order instead of the order they were created in
+- [x] User can edit a card and see the edit saved when they browse through their deck of cards
+- [x] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+
 # Lab 2
 
 ### App Description
