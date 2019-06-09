@@ -7,7 +7,7 @@ A simple user-friendly flashcard application that allows users to create custom 
 
 ### App Walk-though
 
-<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo3.gif" width=300><br>
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo3.gif" width=400><br>
 
 ## Required
 - [x] User can create a card and still see their created card when the app is relaunched.
@@ -25,7 +25,7 @@ A simple user-friendly flashcard application that allows users to create custom 
 A simple user-friendly flashcard application that allows users to create custom flashcards and edit them. 
 
 ### App Walk-through
-<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo2.gif" width=300><br>
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo2.gif" width=400><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
@@ -47,7 +47,7 @@ A simple user-friendly flashcard application that allows users to create custom 
 A simple user-friendly flashcard application. 
 
 ### App Walk-though
-<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo1.gif" width=300><br>
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo1.gif" width=400><br>
 
 ## Required
 - [x] Create New Project in Android Studio
