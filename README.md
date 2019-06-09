@@ -3,14 +3,11 @@
 ## Lab 4
 
 ### App Description
-`TODO://` Add app description
+A simple user-friendly flashcard application, with implementation of animations and stylying, that allows users to create custom flashcards with multiple options and edit them. Created flashcard are saved into the database, it can be retrived even after user closes the app of restart the device. 
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
+<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo4.gif" width=400><br>
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
 - [x] User sees a transition animation when going from the main screen to the add card screen.
