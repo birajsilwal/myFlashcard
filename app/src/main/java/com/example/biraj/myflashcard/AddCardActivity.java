@@ -1,8 +1,8 @@
 package com.example.biraj.myflashcard;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,6 +29,7 @@ public class AddCardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setResult(RESULT_CANCELED);
                 finish();
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
 
@@ -50,11 +51,10 @@ public class AddCardActivity extends AppCompatActivity {
                     data.putExtra("wrong_answer_2", wrong_answer_2);
                     setResult(RESULT_OK, data);
                     finish();
+                    overridePendingTransition(R.anim.right_in, R.anim.left_out);
                 }
             }
         });
-
-
     }
 }
 

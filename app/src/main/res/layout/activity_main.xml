@@ -116,11 +116,12 @@
         android:id="@+id/delete_card"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_alignStart="@+id/flashcard_question"
+        android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="167dp"
-        android:layout_marginBottom="22dp"
-        android:src="@mipmap/trash_icon" />
+        android:src="@mipmap/trash_icon"
+        android:layout_marginBottom="20dp"
+        android:gravity="left|center"
+        />
 
     <TextView
         android:id="@+id/emptystate"
@@ -136,8 +137,17 @@
         android:visibility="invisible"
         android:textAlignment="center"
         android:elevation="15dp"
-
         />
 
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/my_red_color"
+        android:text="6"
+        android:textSize="25sp" />
 </RelativeLayout>
 

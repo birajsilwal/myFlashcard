@@ -1,13 +1,20 @@
 package com.example.biraj.myflashcard;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+
+import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.List;
 import java.util.Random;
@@ -21,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     FlashcardDatabase flashcardDatabase;
     List<Flashcard> allFlashcards;
 
+    CountDownTimer countDownTimer;
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         flashcardDatabase = new FlashcardDatabase(getApplicationContext());
         allFlashcards = flashcardDatabase.getAllCards();
+        //startTimer();
 
         //check if the database is empty or not
         if (allFlashcards != null && allFlashcards.size() > 0) {
@@ -42,26 +52,101 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findViewById(R.id.flashcard_answer).setVisibility(View.VISIBLE);
-                findViewById(R.id.flashcard_question).setVisibility(View.INVISIBLE);
+                final View questionSideView = v;
+
+/*                int cx = questionSideView.getWidth() / 2;
+                int cy = questionSideView.getHeight() / 2;
+                float finalRadius = (float) Math.hypot(cx, cy);
+                Animator anim = ViewAnimationUtils.createCircularReveal(questionSideView, cx, cy, 0f, finalRadius);
+
+                questionSideView.setVisibility(View.INVISIBLE);
+                answerSideView.setVisibility(View.VISIBLE);
+                anim.setDuration(300);
+                anim.start();
+
+//                findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
+//                findViewById(R.id.flashcard_question).setVisibility(View.VISIBLE);
+                //startTimer();
+
+                questionSideView.animate()
+                        .rotationY(90)
+                        .setDuration(200)
+                        .start();*/
+
+                questionSideView.animate()
+                        .rotationY(90)
+                        .setDuration(200)
+                        .withEndAction(
+                                new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        questionSideView.setVisibility(View.INVISIBLE);
+                                        findViewById(R.id.flashcard_answer).setVisibility(View.VISIBLE);
+                                        // second quarter turn
+                                        findViewById(R.id.flashcard_answer).setRotationY(-90);
+                                        findViewById(R.id.flashcard_answer).animate()
+                                                .rotationY(0)
+                                                .setDuration(200)
+                                                .start();
+                                    }
+                                }
+                        ).start();
             }
         });
 
         findViewById(R.id.flashcard_answer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findViewById(R.id.flashcard_answer).setVisibility(View.INVISIBLE);
-                findViewById(R.id.flashcard_question).setVisibility(View.VISIBLE);
+                final View answerSideView = v;
+
+/*                // get the center for the clipping circle
+                int cx = answerSideView.getWidth() / 2;
+                int cy = answerSideView.getHeight() / 2;
+
+                // get the final radius for the clipping circle
+                float finalRadius = (float) Math.hypot(cx, cy);
+
+                // create the animator for this view (the start radius is zero)
+                Animator anim = ViewAnimationUtils.createCircularReveal(answerSideView, cx, cy, 0f, finalRadius);
+
+                // hide the question and show the answer to prepare for playing the animation!
+                answerSideView.setVisibility(View.INVISIBLE);
+                //questionSideView.setVisibility(View.VISIBLE);
+
+                anim.setDuration(300);
+                anim.start();
+
+                findViewById(R.id.flashcard_answer).setVisibility(View.VISIBLE);
+                findViewById(R.id.flashcard_question).setVisibility(View.INVISIBLE);
+                startTimer();*/
+
+                answerSideView.animate()
+                        .rotationY(90)
+                        .setDuration(200)
+                        .withEndAction(
+                                new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        answerSideView.setVisibility(View.INVISIBLE);
+                                        findViewById(R.id.flashcard_question).setVisibility(View.VISIBLE);
+                                        // second quarter turn
+                                        findViewById(R.id.flashcard_question).setRotationY(-90);
+                                        findViewById(R.id.flashcard_question).animate()
+                                                .rotationY(0)
+                                                .setDuration(200)
+                                                .start();
+                                    }
+                                }
+                        ).start();
             }
         });
-
-//for options (correct and incorrect)
 
         findViewById(R.id.incorrect_answer1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 v.setBackground(getResources().getDrawable(R.drawable.incorrect_option_background));
                 findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.correct_option_background));
+                //startTimer();
             }
         });
 
@@ -70,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 v.setBackground(getResources().getDrawable(R.drawable.incorrect_option_background));
                 findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.correct_option_background));
+                //startTimer();
             }
         });
 
@@ -77,6 +163,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.correct_option_background));
+                //startTimer();
+                new ParticleSystem(MainActivity.this, 100, R.drawable.confetti, 3000)
+                        .setSpeedRange(0.2f, 0.5f)
+                        .oneShot(findViewById(R.id.correct_answer), 100);
             }
         });
 
@@ -94,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
                 MainActivity.this.startActivityForResult(intent, ADD_CARD_REQUEST_CODE);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
 
@@ -107,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
                 data.putExtra("incorrect_answer1", ((TextView) findViewById(R.id.incorrect_answer1)).getText().toString());
                 data.putExtra("incorrect_answer2", ((TextView) findViewById(R.id.incorrect_answer2)).getText().toString());
                 MainActivity.this.startActivityForResult(data, EDIT_CARD_REQUEST_CODE);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
 
@@ -114,8 +206,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.next_card).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // advance our pointer index so we can show the next card
                 currentCardDisplayedIndex++;
+                final Animation rightInAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.right_in);
+                final Animation leftOutAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.left_out);
 
                 // make sure we don't get an IndexOutOfBoundsError if we are viewing the last indexed card in our list
                 if (currentCardDisplayedIndex > allFlashcards.size() - 1) {
@@ -128,6 +221,25 @@ public class MainActivity extends AppCompatActivity {
                 ((TextView) findViewById(R.id.correct_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
                 ((TextView) findViewById(R.id.incorrect_answer1)).setText(allFlashcards.get(currentCardDisplayedIndex).getWrongAnswer1());
                 ((TextView) findViewById(R.id.incorrect_answer2)).setText(allFlashcards.get(currentCardDisplayedIndex).getWrongAnswer2());
+                startTimer();
+
+                leftOutAnim.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        findViewById(R.id.flashcard_question).startAnimation(rightInAnim);
+                        findViewById(R.id.correct_answer).startAnimation(rightInAnim);
+                        findViewById(R.id.wrong_answer_1).startAnimation(rightInAnim);
+                        findViewById(R.id.wrong_answer_2).startAnimation(rightInAnim);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+                    }
+                });
             }
         });
 
@@ -139,6 +251,17 @@ public class MainActivity extends AppCompatActivity {
                 currentCardDisplayedIndex--;
             }
         });
+
+        countDownTimer = new CountDownTimer(6000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                ((TextView) findViewById(R.id.timer)).setText("" + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                findViewById(R.id.correct_answer).setBackground(getResources().getDrawable(R.drawable.correct_option_background));
+
+            }
+        };
     }
 
     @Override
@@ -166,4 +289,12 @@ public class MainActivity extends AppCompatActivity {
            }
         }
     }
+
+    private void startTimer() {
+        countDownTimer.cancel();
+        countDownTimer.start();
+
+    }
+
+
 }

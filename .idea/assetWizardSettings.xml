@@ -60,10 +60,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="C:\Users\Venom\Downloads\trash_icon.png" />
-                                      <entry key="foregroundLayerName" value="trash_icon" />
-                                      <entry key="outputName" value="trash" />
+                                      <entry key="foregroundImage" value="C:\Users\Venom\Downloads\app_icon.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
