@@ -27,7 +27,7 @@ A simple user-friendly flashcard application that allows users to create custom 
 
 ### App Walk-though
 
-<img src="https://github.com/birajsilwal/myFlashcard/blob/master/walk-throughs/flashcard demo3.gif" width=400><br>
+<img src="https://github.com/birajsilwal/Flixster/tree/master/walk-throughs/flixster1.gif" width=400><br>
 
 ## Required
 - [x] User can create a card and still see their created card when the app is relaunched.
